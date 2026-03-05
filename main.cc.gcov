@@ -1,0 +1,11 @@
+        -:    0:Source:main.cc
+        -:    0:Graph:a-main.gcno
+        -:    0:Data:a-main.gcda
+        -:    0:Runs:9
+        -:    1:#include "/public/read.h" // IWYU pragma: keep
+        -:    2:#include <vector>         // IWYU pragma: keep
+        -:    3:using namespace std;
+        -:    4:
+        9:    5:int main() {
+        9:    6:	cout << "Hello World!" << endl;
+        9:    7:}

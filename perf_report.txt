@@ -1,0 +1,358 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 12  of event 'cycles:Pu'
+# Event count (approx.): 1245383
+#
+# Children      Self  Command  Shared Object          Symbol                      
+# ........  ........  .......  .....................  ............................
+#
+    77.30%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff2288e354
+            |
+            ---0x7fff2288e354
+               |          
+                --77.23%--0x7fff2288a408
+                          0x7fff22889028
+                          |          
+                          |--64.29%--0x7fff2288bcfc
+                          |          0x7fff22881428
+                          |          |          
+                          |          |--43.20%--0x7fff2288013f
+                          |          |          |          
+                          |          |          |--22.03%--0x7fff2288009c
+                          |          |          |          
+                          |          |           --21.17%--0x7fff228800b8
+                          |          |          
+                          |           --21.09%--0x7fff22880140
+                          |                     0x7fff2287c2d0
+                          |          
+                          |--11.78%--0x7fff2288bc90
+                          |          0x7fff22881428
+                          |          0x7fff22880140
+                          |          0x7fff2287c2b4
+                          |          
+                           --1.16%--0x7fff2288ae34
+                                     0x7fff2287d814
+
+    77.23%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff2288a408
+            |
+            ---0x7fff2288a408
+               0x7fff22889028
+               |          
+               |--64.29%--0x7fff2288bcfc
+               |          0x7fff22881428
+               |          |          
+               |          |--43.20%--0x7fff2288013f
+               |          |          |          
+               |          |          |--22.03%--0x7fff2288009c
+               |          |          |          
+               |          |           --21.17%--0x7fff228800b8
+               |          |          
+               |           --21.09%--0x7fff22880140
+               |                     0x7fff2287c2d0
+               |          
+               |--11.78%--0x7fff2288bc90
+               |          0x7fff22881428
+               |          0x7fff22880140
+               |          0x7fff2287c2b4
+               |          
+                --1.16%--0x7fff2288ae34
+                          0x7fff2287d814
+
+    77.23%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff22889028
+            |
+            ---0x7fff22889028
+               |          
+               |--64.29%--0x7fff2288bcfc
+               |          0x7fff22881428
+               |          |          
+               |          |--43.20%--0x7fff2288013f
+               |          |          |          
+               |          |          |--22.03%--0x7fff2288009c
+               |          |          |          
+               |          |           --21.17%--0x7fff228800b8
+               |          |          
+               |           --21.09%--0x7fff22880140
+               |                     0x7fff2287c2d0
+               |          
+               |--11.78%--0x7fff2288bc90
+               |          0x7fff22881428
+               |          0x7fff22880140
+               |          0x7fff2287c2b4
+               |          
+                --1.16%--0x7fff2288ae34
+                          0x7fff2287d814
+
+    76.07%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff22881428
+            |
+            ---0x7fff22881428
+               |          
+               |--43.20%--0x7fff2288013f
+               |          |          
+               |          |--22.03%--0x7fff2288009c
+               |          |          
+               |           --21.17%--0x7fff228800b8
+               |          
+                --32.87%--0x7fff22880140
+                          |          
+                          |--21.09%--0x7fff2287c2d0
+                          |          
+                           --11.78%--0x7fff2287c2b4
+
+    64.29%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff2288bcfc
+            |
+            ---0x7fff2288bcfc
+               0x7fff22881428
+               |          
+               |--43.20%--0x7fff2288013f
+               |          |          
+               |          |--22.03%--0x7fff2288009c
+               |          |          
+               |           --21.17%--0x7fff228800b8
+               |          
+                --21.09%--0x7fff22880140
+                          0x7fff2287c2d0
+
+    43.20%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff2288013f
+            |
+            ---0x7fff2288013f
+               |          
+               |--22.03%--0x7fff2288009c
+               |          
+                --21.17%--0x7fff228800b8
+
+    32.87%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff22880140
+            |
+            ---0x7fff22880140
+               |          
+               |--21.09%--0x7fff2287c2d0
+               |          
+                --11.78%--0x7fff2287c2b4
+
+    22.70%    22.70%  a.out    libc.so.6              [.] _IO_file_seekoff
+            |
+            ---_start
+               __libc_start_main
+               0x7fff224422a0
+               0x7fff224595e0
+               0x7fff224594ec
+               0x7fff22877994
+               0x7fff22874da8
+               _sub_D_00100_1
+               __gcov_exit
+               gcov_do_dump.constprop.0
+               fseek
+               _IO_file_seekoff
+
+    22.70%     0.00%  a.out    a.out                  [.] _start
+            |
+            ---_start
+               __libc_start_main
+               0x7fff224422a0
+               0x7fff224595e0
+               0x7fff224594ec
+               0x7fff22877994
+               0x7fff22874da8
+               _sub_D_00100_1
+               __gcov_exit
+               gcov_do_dump.constprop.0
+               fseek
+               _IO_file_seekoff
+
+    22.70%     0.00%  a.out    libc.so.6              [.] __libc_start_main
+            |
+            ---__libc_start_main
+               0x7fff224422a0
+               0x7fff224595e0
+               0x7fff224594ec
+               0x7fff22877994
+               0x7fff22874da8
+               _sub_D_00100_1
+               __gcov_exit
+               gcov_do_dump.constprop.0
+               fseek
+               _IO_file_seekoff
+
+    22.70%     0.00%  a.out    libc.so.6              [.] 0x00007fff224422a0
+            |
+            ---0x7fff224422a0
+               0x7fff224595e0
+               0x7fff224594ec
+               0x7fff22877994
+               0x7fff22874da8
+               _sub_D_00100_1
+               __gcov_exit
+               gcov_do_dump.constprop.0
+               fseek
+               _IO_file_seekoff
+
+    22.70%     0.00%  a.out    libc.so.6              [.] 0x00007fff224595e0
+            |
+            ---0x7fff224595e0
+               0x7fff224594ec
+               0x7fff22877994
+               0x7fff22874da8
+               _sub_D_00100_1
+               __gcov_exit
+               gcov_do_dump.constprop.0
+               fseek
+               _IO_file_seekoff
+
+    22.70%     0.00%  a.out    libc.so.6              [.] 0x00007fff224594ec
+            |
+            ---0x7fff224594ec
+               0x7fff22877994
+               0x7fff22874da8
+               _sub_D_00100_1
+               __gcov_exit
+               gcov_do_dump.constprop.0
+               fseek
+               _IO_file_seekoff
+
+    22.70%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff22877994
+            |
+            ---0x7fff22877994
+               0x7fff22874da8
+               _sub_D_00100_1
+               __gcov_exit
+               gcov_do_dump.constprop.0
+               fseek
+               _IO_file_seekoff
+
+    22.70%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff22874da8
+            |
+            ---0x7fff22874da8
+               _sub_D_00100_1
+               __gcov_exit
+               gcov_do_dump.constprop.0
+               fseek
+               _IO_file_seekoff
+
+    22.70%     0.00%  a.out    a.out                  [.] _sub_D_00100_1
+            |
+            ---_sub_D_00100_1
+               __gcov_exit
+               gcov_do_dump.constprop.0
+               fseek
+               _IO_file_seekoff
+
+    22.70%     0.00%  a.out    a.out                  [.] __gcov_exit
+            |
+            ---__gcov_exit
+               gcov_do_dump.constprop.0
+               fseek
+               _IO_file_seekoff
+
+    22.70%     0.00%  a.out    a.out                  [.] gcov_do_dump.constprop.0
+            |
+            ---gcov_do_dump.constprop.0
+               fseek
+               _IO_file_seekoff
+
+    22.70%     0.00%  a.out    libc.so.6              [.] fseek
+            |
+            ---fseek
+               _IO_file_seekoff
+
+    22.03%    22.03%  a.out    ld-linux-aarch64.so.1  [.] 0x000000000000c09c
+            |
+            ---0x7fff2288e354
+               0x7fff2288a408
+               0x7fff22889028
+               0x7fff2288bcfc
+               0x7fff22881428
+               0x7fff2288013f
+               0x7fff2288009c
+
+    22.03%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff2288009c
+            |
+            ---0x7fff2288009c
+
+    21.17%    21.17%  a.out    ld-linux-aarch64.so.1  [.] 0x000000000000c0b8
+            |
+            ---0x7fff2288e354
+               0x7fff2288a408
+               0x7fff22889028
+               0x7fff2288bcfc
+               0x7fff22881428
+               0x7fff2288013f
+               0x7fff228800b8
+
+    21.17%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff228800b8
+            |
+            ---0x7fff228800b8
+
+    21.09%    21.09%  a.out    ld-linux-aarch64.so.1  [.] 0x00000000000082d0
+            |
+            ---0x7fff2288e354
+               0x7fff2288a408
+               0x7fff22889028
+               0x7fff2288bcfc
+               0x7fff22881428
+               0x7fff22880140
+               0x7fff2287c2d0
+
+    21.09%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff2287c2d0
+            |
+            ---0x7fff2287c2d0
+
+    11.78%    11.78%  a.out    ld-linux-aarch64.so.1  [.] 0x00000000000082b4
+            |
+            ---0x7fff2288e354
+               0x7fff2288a408
+               0x7fff22889028
+               0x7fff2288bc90
+               0x7fff22881428
+               0x7fff22880140
+               0x7fff2287c2b4
+
+    11.78%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff2288bc90
+            |
+            ---0x7fff2288bc90
+               0x7fff22881428
+               0x7fff22880140
+               0x7fff2287c2b4
+
+    11.78%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff2287c2b4
+            |
+            ---0x7fff2287c2b4
+
+     1.16%     1.16%  a.out    ld-linux-aarch64.so.1  [.] 0x0000000000009814
+            |
+            ---0x7fff2288e354
+               0x7fff2288a408
+               0x7fff22889028
+               0x7fff2288ae34
+               0x7fff2287d814
+
+     1.16%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff2288ae34
+            |
+            ---0x7fff2288ae34
+               0x7fff2287d814
+
+     1.16%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff2287d814
+            |
+            ---0x7fff2287d814
+
+     0.07%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff2288e353
+     0.07%     0.07%  a.out    ld-linux-aarch64.so.1  [.] 0x0000000000015ed4
+     0.07%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff22889ed4
+     0.00%     0.00%  a.out    [unknown]              [.] 0xffffd06fce411550
+     0.00%     0.00%  a.out    [unknown]              [k] 0xffffd06fcf1df58c
+     0.00%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff22889e8c
+     0.00%     0.00%  a.out    [unknown]              [.] 0xffffd06fcf1e01c4
+     0.00%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x0000000000015e80
+     0.00%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff22889e80
+     0.00%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff2288e340
+     0.00%     0.00%  a.out    [unknown]              [k] 0xffffd06fcf1dfbb8
+     0.00%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x0000000000015e50
+     0.00%     0.00%  a.out    [unknown]              [.] 0xffffd06fcf1e01dc
+     0.00%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x000000000001a340
+     0.00%     0.00%  a.out    ld-linux-aarch64.so.1  [.] 0x00007fff22889e50
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
