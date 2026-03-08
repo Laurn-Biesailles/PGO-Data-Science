@@ -1,0 +1,12 @@
+#ifndef ANALYSIS_H
+#define ANALYSIS_H
+
+#include "dataset.h"
+
+// Runs the full Titanic analysis by testing various condition combinations.
+class Analyzer {
+    public:
+        static void runAnalysis(const std::vector<Passenger>& passengers);
+};
+
+#endif
