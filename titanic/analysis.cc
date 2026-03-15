@@ -57,14 +57,14 @@ void Analyzer::runAnalysis(const vector<Passenger>& passengers) {
                             if (r.probability >= 0.70) {
                                 stableCount++;
                             }
-                        } else {
+                        }/* else {
                             // Branch for rare cases when a resample contains no matches
                             if (minProb > 0.0) {
                                 minProb = 0.0;
                             } if (maxProb < 0.0) {
                                 maxProb = 0.0;
                             }
-                        }  
+                        }  */
                     }
 
                     double avgProb = totalProb / BOOTSTRAP_ITERATIONS;

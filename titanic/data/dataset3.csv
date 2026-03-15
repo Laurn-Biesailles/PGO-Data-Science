@@ -1,0 +1,7 @@
+PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+1,1,1,"A, A",female,22,0,0,T1,80,,S
+2,0,3,"B, B",male,30,0,0,T2,7,,S
+3,0,3,"C, C",male,28,0,0,T3,8,,S
+4,1,2,"D, D",female,19,0,0,T4,25,,S
+5,0,2,"E, E",male,42,0,0,T5,15,,S
+6,1,1,"F, F",female,35,0,0,T6,90,,S

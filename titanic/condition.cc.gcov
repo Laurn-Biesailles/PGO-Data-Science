@@ -1,0 +1,65 @@
+        -:    0:Source:condition.cc
+        -:    1:#include "condition.h"
+        -:    2:
+        -:    3:using namespace std;
+        -:    4:
+        -:    5:
+    #####:    6:ConditionRes Condition::defineCond(
+        -:    7:    const std::vector<Passenger>& passengers, int gender, int pclass, int ageGroup, int fareGroup
+        -:    8:) {
+    #####:    9:    int matched  = 0;
+    #####:   10:    int survived = 0;
+        -:   11:    
+        -:   12:    // Check every passenger against the current condition.
+    #####:   13:    for (const auto& p : passengers) {
+    #####:   14:        bool cond = true;
+        -:   15:
+        -:   16:        // Apply gender condition if specified.
+    #####:   17:        if (gender != -1) {
+    #####:   18:            cond = cond && (p.sex == gender);
+        -:   19:        }
+        -:   20:
+        -:   21:        // Apply ticket class condition if specified.
+    #####:   22:        if (pclass != -1) {
+    #####:   23:            cond = cond && (p.pClass == pclass);
+        -:   24:        }
+        -:   25:
+        -:   26:        // Apply age grouping condition.
+    #####:   27:        if (ageGroup != -1) {
+    #####:   28:            if (ageGroup == 0) {
+    #####:   29:                cond = cond && (p.age < 18);
+    #####:   30:            } else if (ageGroup == 1) {
+    #####:   31:                cond = cond && (p.age >= 18 && p.age < 40);
+        -:   32:            } else {
+    #####:   33:                cond = cond && (p.age >= 40);
+        -:   34:            }
+        -:   35:        }
+        -:   36:
+        -:   37:        // Apply fare grouping condition.
+    #####:   38:        if (fareGroup != -1) {
+    #####:   39:            if (fareGroup == 0) {
+    #####:   40:                cond = cond && (p.fare < 20);
+    #####:   41:            } else if (fareGroup == 1) {
+    #####:   42:                cond = cond && (p.fare >= 20 && p.fare < 50);
+        -:   43:            } else {
+    #####:   44:                cond = cond && (p.fare >= 50);
+        -:   45:            }
+        -:   46:        }
+        -:   47:        
+        -:   48:        // If passenger satisfies all active conditions, count them.
+    #####:   49:        if (cond) {
+    #####:   50:            matched++;
+    #####:   51:            if (p.survived) {
+    #####:   52:                survived++;
+        -:   53:            }
+        -:   54:        }
+    #####:   55:    }
+        -:   56:
+    #####:   57:    ConditionRes cr;
+    #####:   58:    cr.matched     = matched;
+    #####:   59:    cr.survived    = survived;
+    #####:   60:    cr.probability = matched ? (double)survived / matched : 0;
+        -:   61:
+    #####:   62:    return cr;
+        -:   63:    
+        -:   64:}
