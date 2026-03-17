@@ -2,10 +2,14 @@
 
 ## Project Members
 
-###Person 1 (Data Science):  Amir
-###Person 2 (The Tester):  Jack
-###Person 3 (Instrumenter):  Gurshan
-###Person 4 (Pogo Stick):  Justus
+##Person 1 (Data Science):  Amir
+
+##Person 2 (The Tester):  Jack
+
+##Person 3 (Instrumenter):  Gurshan
+
+##Person 4 (Pogo Stick):  Justus
+
 
 ## Overview
 
