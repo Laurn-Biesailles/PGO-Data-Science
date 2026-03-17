@@ -1,5 +1,12 @@
 # Titanic Survival Pattern Analyzer
 
+## Project Members
+
+###Person 1 (Data Science):  Amir
+###Person 2 (The Tester):  Jack
+###Person 3 (Instrumenter):  Gurshan
+###Person 4 (Pogo Stick):  Justus
+
 ## Overview
 
 This project analyzes the Titanic dataset from Kaggle using C++. The program searches for patterns that correlate with passenger survival by evaluating combinations of demographic and ticket-related features.
