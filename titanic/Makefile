@@ -36,7 +36,11 @@ pgo-gen:
 
 #PGO use
 pgo-use:
-	$(CXX) $(SRC) -fprofile-use -O3 -o $(TARGET)
+	$(CXX) $(SRC) -fprofile-use -O3 -Wno-coverage-mismatch -o $(TARGET)
+
+#Perfing
+perfing:
+	$(CXX) $(SRC) -g -O3 -fno-omit-frame-pointer
 
 # Remove executable, object files, and coverage output
 clean:
