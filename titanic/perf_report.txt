@@ -160,14 +160,14 @@
 
     22.05%    22.05%  a.out    libc.so.6              [.] 0x0000000000143f3c
             |
-            ---_start
+            ---0x55558c141b30
                __libc_start_main
                0x7fff4eae8bdb
                0x7fff4ebf3f3c
 
-    22.05%     0.00%  a.out    a.out                  [.] _start
+    22.05%     0.00%  a.out    a.out                  [.] 0x000055558c141b30
             |
-            ---_start
+            ---0x55558c141b30
                __libc_start_main
                0x7fff4eae8bdb
                0x7fff4ebf3f3c

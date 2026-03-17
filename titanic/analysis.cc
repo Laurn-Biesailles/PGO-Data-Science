@@ -103,8 +103,10 @@ void Analyzer::runAnalysis(const vector<Passenger>& passengers) {
                         cout << "Bootstrap max rate: " << maxProb << endl;
                         cout << "Stability (rate >= 0.70): " << stability << endl;
                     }
-            }
+
+				}
         }
     }
 }
+
 } 

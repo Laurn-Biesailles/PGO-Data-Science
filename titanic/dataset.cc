@@ -10,7 +10,9 @@ using namespace std;
    This is necessary because Titanic names contain commas,
    such as: "Braund, Mr. Owen Harris" 
 */
+
 static vector<string> splitCSVLine(const string& line){
+
     vector<string> fields;
     string current;
     bool inQuotes = false;
@@ -35,6 +37,7 @@ static vector<string> splitCSVLine(const string& line){
     // Add the last field after the loop ends.
     fields.push_back(current);
     return fields;
+
 }
 
 
@@ -51,7 +54,8 @@ bool Dataset::loadCSVfile(const string& filename) {
     getline(file, line);  // Skip the header row
 
     while(getline(file, line)) {
-        if (line.empty()) {
+        
+		if (line.empty()){
             continue;
         }
         vector<string> fields = splitCSVLine(line);
@@ -71,16 +75,17 @@ bool Dataset::loadCSVfile(const string& filename) {
             p.sex = (fields[4] == "male") ? 0 : 1;
 
             // Missing ages are stored as -1. (This helps to handle null data)
-            if(fields[5].empty()) {
+            if(fields[5].empty()){
                 p.age = -1.0;
             } else {
                 p.age = stod(fields[5]);
             }
+
             p.sibsp = stoi(fields[6]);
             p.parch = stoi(fields[7]);
 
             // Missing fares are treated as 0.
-            if (fields[9].empty()) {
+            if (fields[9].empty()){
                 p.fare = 0.0;
             } else {
                 p.fare = stod(fields[9]);

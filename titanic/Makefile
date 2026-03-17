@@ -8,10 +8,11 @@ TARGET=titanic
 
 # Standard compiler warnings and C++ version
 CXXFLAGS=-std=c++17 -Wall
+SANFLAGS=-fsanitize=address,undefined -fno-omit-frame-pointer
 
 # Normal build
 all: $(TARGET)
-
+	
 $(TARGET): $(OBJ)
 	$(CXX)	$(CXXFLAGS) -o $(TARGET)	$(OBJ)
 
@@ -19,9 +20,14 @@ $(TARGET): $(OBJ)
 	$(CXX)	$(CXXFLAGS)	-c	$< -o $@
 
 # Build in optimized way
+
+a: 
+	$(CXX)	$(SRC) $(CXXFLAGS) $(SANFLAGS) -o $(TARGET)
 opt:
 	$(CXX)	$(SRC) -O3 -o $(TARGET)
-
+	
+c:
+	$(CXX) $(SRC) -O3 -flto -o $(TARGET)
 # LTO (link-time-optimization)
 lto:
 	$(CXX)	$(SRC)	-O3 -flto -o $(TARGET)
