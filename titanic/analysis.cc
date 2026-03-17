@@ -4,7 +4,12 @@
 #include <random>
 #include <limits>
 
+#include <chrono>
+
 using namespace std;
+using namespace std::chrono;
+
+using sc = steady_clock;
 
 vector<Passenger> Analyzer::makeBootstrapSample(const vector<Passenger>& passengers) {
     vector<Passenger> sample;
@@ -21,7 +26,8 @@ vector<Passenger> Analyzer::makeBootstrapSample(const vector<Passenger>& passeng
 }
 
 void Analyzer::runAnalysis(const vector<Passenger>& passengers) {
-    
+   
+	cout << "RAN OUR CODE\n\n\n";
     // Tries various combination of conditions.
     // -1 means "do not filter on this feature."
     const int BOOTSTRAP_ITERATIONS = 20000;
@@ -40,6 +46,8 @@ void Analyzer::runAnalysis(const vector<Passenger>& passengers) {
                     double minProb = numeric_limits<double>::max();
                     double maxProb = numeric_limits<double>::lowest();
                     int stableCount = 0;
+
+					auto start = sc::now();
 
                     // Heavy computation: repeatedly resample and re-evaluate
                     for (int iter = 0; iter < BOOTSTRAP_ITERATIONS; iter++) {
@@ -66,6 +74,10 @@ void Analyzer::runAnalysis(const vector<Passenger>& passengers) {
                             }
                         }  */
                     }
+
+					auto end = sc::now();
+
+					cout << (duration<double>(end-start)).count() << endl;
 
                     double avgProb = totalProb / BOOTSTRAP_ITERATIONS;
                     double stability = static_cast<double>(stableCount) / BOOTSTRAP_ITERATIONS;
